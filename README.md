@@ -1,24 +1,7 @@
-# README
+# Coworker Questions And Answer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What is the status a project history should have ?
+Answer: Inactive , ongoing,  completed , cancelled
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+How should the project history list be rendered, 4 columns for each status and sorted by date of creation or rendered in one list and sorted by date of creation ? 
+Answer: rendered in one list and sorted by date of creation 
