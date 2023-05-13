@@ -1,0 +1,34 @@
+<div class="container info-page">
+
+
+
+
+
+<p class="nav-back"><svg class="svg-back" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M480 896 160 576l320-320 42 42-248 248h526v60H274l248 248-42 42Z"/></svg><%= link_to "Home" , root_path%></p>
+
+<div class="info-page-header">
+<h2>Project Name: <%= @project.title %></h2>
+<p><span>Description: </span> <span><%= @project.description %></span></p>
+<p><span> Status: </span> <span><%= @project.status %></span></p>
+</div>
+
+<div class="info-page-controls">
+  <span><%= link_to "Edit", edit_project_path(@project) %></span>
+  <span class="delete"><%= link_to "Delete", project_path(@project), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></span>
+</div>
+
+
+<h2>Comments</h2>
+<div class="comments">
+<%= render @project.comments %>
+</div>
+
+<h2>Add a comment:</h2>
+
+<div class="form-container">
+<%= render 'comments/form' %>
+</div>
+</div>

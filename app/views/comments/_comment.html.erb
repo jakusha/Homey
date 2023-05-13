@@ -1,0 +1,22 @@
+<div class="comment-item">
+
+<p>
+  <strong>Name:</strong>
+  <span><%= comment.name %></span>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <span><%= comment.comment %></span>
+  
+</p>
+
+ <span class="del-btn">
+    <%= link_to "Delete Comment", [comment.project, comment], data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+  </span>
+
+
+</div>

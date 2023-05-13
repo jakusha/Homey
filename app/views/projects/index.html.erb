@@ -1,0 +1,18 @@
+<div class="container index">
+<h1 class="text-5xl text-red-300">Homey Projects History</h1>
+
+<div class="new-btn"><%=  link_to "New Project History", new_project_path %></div>
+<%# colorscheme notstated - grey started - yellow complete - green cancelled - red %>
+<div class="proj-header"> <span>project name</span> <span>status</span></div>
+<ul>
+  <% @projects.each do |project| %>
+    <li class="proj-info">
+      <%= link_to project.title, project %>
+      <%= project.status%>
+    </li>
+  <% end %>
+</ul>
+
+
+</div>
+

@@ -1,0 +1,33 @@
+<div class="form-container">
+
+<%= form_with model: project do |form| %>
+
+    <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <% project.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+    <% project.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= form.label :status %>
+  <%= form.select :status, ['notStarted', 'inProgress', 'completed','cancelled'], selected: 'notStarted' %>
+</div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+</div>
